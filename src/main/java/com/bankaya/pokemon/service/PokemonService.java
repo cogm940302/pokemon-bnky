@@ -38,7 +38,7 @@ public class PokemonService {
         return pokemonInfo;
     }
 
-    private <T extends PokemonResponse> T consumeService(Class<T>  pr, String name) {
+    public <T extends PokemonResponse> T consumeService(Class<T>  pr, String name) {
         WebClient webClient = WebClient.builder().baseUrl("https://pokeapi.co/api/v2/pokemon").build();
         try {
             T response = webClient.get()

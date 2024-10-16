@@ -38,8 +38,7 @@ public class PokemonEndpoint {
         if(name == null || name.isEmpty()) {
             throw new LogicException("Pokemon Invalido");
         }
-        GetPokemonResponse res = pokemonService.getPokemonInfo(name, ipAddress);
-        return res;
+        return pokemonService.getPokemonInfo(name, ipAddress);
     }
 
     @PayloadRoot(namespace = NAMESPACE_URI, localPart = "pokemonAbilitiesRequest")

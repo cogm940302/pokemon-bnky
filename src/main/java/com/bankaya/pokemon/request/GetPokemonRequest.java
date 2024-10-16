@@ -3,9 +3,11 @@ package com.bankaya.pokemon.request;
 import jakarta.xml.bind.annotation.*;
 import lombok.Getter;
 import lombok.Setter;
+import lombok.ToString;
 
 @Setter
 @Getter
+@ToString
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
         "name"
